@@ -28,18 +28,61 @@ body{
     padding-left: 15px;
 }
 
+#month-label{
+    margin: 20px 0px 0px 50px;
+}
+
 #main-container{
+    display: grid;
     box-sizing: border-box;
     margin: 20px;
     height: 300px;
-    display: grid;
-    grid-template-columns: 60% 40%;
+    border: 1px solid gray;
+    border-radius: 7px;
+    grid-template-columns: 45% auto;
+    overflow: hidden;
 }
 
 #cal{
-    background-color: rgb(248, 142, 163);
+    display: grid;
+    grid-template-columns: repeat(7, 40px);
+    grid-template-rows: repeat(6, 40px);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
 }
 
 #detail{
-    background-color: rgb(240, 54, 91);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-left: 1px solid gray;
+}
+
+.day{
+    margin:5px;
+    background-color: rgb(255, 238, 238);
+    transition: all 0.1s;
+    font-size: 0.7em;
+    padding-left: 2px;
+}
+
+.day:hover{
+    margin: 0px;
+    cursor: pointer
+}
+
+.col-start{
+    grid-column-start: 3;
+}
+
+.event-card{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+.event-id{
+    position:absolute;
+    top: 5px;
+    right: 5px;
 }
